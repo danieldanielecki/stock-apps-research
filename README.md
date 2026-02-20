@@ -106,6 +106,42 @@ The **Financials** tab on TradingView has sub-tabs: **Overview**, **Statements**
 
 *Source: [CNN Fear & Greed Index](https://edition.cnn.com/markets/fear-and-greed)*
 
+## Where stock apps get their data (global overview)
+
+Across the internet — websites, mobile apps, broker UIs — stock and market data ultimately flows from a small set of sources. This section summarizes the **global** picture (not specific to this project).
+
+### 1. Where the data actually comes from (upstream)
+
+- **Exchanges** — NYSE, Nasdaq, Cboe, LSE, and other exchanges produce the trades and quotes.
+- **Consolidated feeds (SIPs)** — In the US, a handful of Securities Information Processors aggregate that:
+  - **CTA** (Consolidated Tape Association) — NYSE-listed and related (Network A/B).
+  - **UTP** — Nasdaq-listed and OTC.
+  - **OPRA** — options.
+- Exchanges and SIPs sell or license this data. Apps and websites almost never connect directly to exchanges or SIPs; they go through intermediaries.
+
+### 2. Who apps and websites typically use (data providers / APIs)
+
+Apps and sites usually get data from **commercial market-data or fintech API providers** that license exchange/SIP data (or other sources) and expose it via APIs:
+
+| Type | Examples |
+|------|----------|
+| **Retail / developer APIs** | **Alpha Vantage**, **Polygon.io**, **Finnhub**, **Financial Modeling Prep (FMP)**, **Twelve Data**, **Yahoo Finance** (unofficial), **IEX Cloud** (shut down 2024) |
+| **Professional / institutional** | **Bloomberg**, **Refinitiv (LSEG)**, **FactSet**, **S&P Global**, **Intrinio**, **IEX Exchange** (direct feed, paid) |
+| **Aggregators / vendors** | **Quodd** (formerly Xignite), **Cboe**, **Nasdaq Data Link** — used by many consumer and pro apps behind the scenes |
+| **Broker-sourced** | Some apps display data provided by their **broker** (e.g. Robinhood, Schwab), who have their own contracts with exchanges and data vendors |
+
+So “across the internet,” stock apps get their API information from these **data providers**, which in turn get it from **exchanges and consolidated tapes (SIPs)**.
+
+### 3. Typical flow
+
+1. **Exchanges / SIPs** produce and distribute official market data.
+2. **Data vendors** (Bloomberg, Refinitiv, Polygon, Alpha Vantage, Finnhub, etc.) license it and often add fundamentals, news, and alternative data.
+3. **Websites and mobile apps** — from large (Robinhood, Yahoo Finance, CNN Markets) to small — call these vendors’ **APIs** or use **broker-supplied** data that comes from the same kind of vendor/exchange contracts.
+
+So globally: stock apps get their API data from **market-data API providers and brokers**, which ultimately source it from **exchanges and consolidated tape (SIP)** feeds.
+
+---
+
 ## CNN Business API endpoints
 
 **What kind of API does CNN Business offer?** CNN does **not** publish an official developer API or documentation for Markets or Business data. References:
