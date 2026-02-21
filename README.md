@@ -24,12 +24,24 @@ A dedicated **pricing** page (e.g. `/pricing`) will list these options clearly, 
 
 ### Charts, news & community (TradingView-inspired)
 
-- **[TradingView](https://www.tradingview.com)** is the benchmark for **beautiful charts** and a strong **News** section. We aim for a similar level of clarity and polish for long-term investors (without the trading focus).
-- **[Seeking Alpha](https://seekingalpha.com)** — **favorite tool:** [Comparison](https://seekingalpha.com/comparison) (compare multiple symbols side by side). We also like their **sector comparison** tools ([Sectors hub](https://seekingalpha.com/sectors)): how sectors perform relative to each other. All sectors: [Technology](https://seekingalpha.com/sectors/technology), [Financial](https://seekingalpha.com/sectors/financial), [Consumer Discretionary](https://seekingalpha.com/sectors/consumer-discretionary), [Communication](https://seekingalpha.com/sectors/communication-services), [Healthcare](https://seekingalpha.com/sectors/healthcare), [Industrials](https://seekingalpha.com/sectors/industrials), [Consumer Staples](https://seekingalpha.com/sectors/consumer-staples), [Energy](https://seekingalpha.com/sectors/energy), [Materials](https://seekingalpha.com/sectors/materials), [Real Estate](https://seekingalpha.com/sectors/real-estate), [Utilities](https://seekingalpha.com/sectors/utilities). We also like how they present **dividend screeners** (e.g. [Top Dividend Stocks](https://seekingalpha.com/screeners/9679329c-Top-Dividend-Stocks)) — how dividends performed; a useful reference for income-focused views.
-- **Seeking Alpha per-symbol pages** — clear **profitability** ([e.g. TSLA](https://seekingalpha.com/symbol/TSLA/profitability)), **growth** ([TSLA](https://seekingalpha.com/symbol/TSLA/growth)), **valuation** ([TSLA metrics](https://seekingalpha.com/symbol/TSLA/valuation/metrics)), and **earnings** ([TSLA](https://seekingalpha.com/symbol/TSLA/earnings)) with **color coding** when a metric is good or bad. We also like **comparison vs the market** the stock is listed on ([TSLA charting](https://seekingalpha.com/symbol/TSLA/charting)). Our favorite: **peer comparison** — how a stock stacks up vs peers ([TSLA vs peers](https://seekingalpha.com/symbol/TSLA/peers/comparison)); a strong reference for context and relative valuation.
-- **What’s often missing: what the data means, and whether it’s good or bad.** Many tools show numbers and colors but don’t explain *what* each metric is or *why* it’s good or bad. We want to surface **plain-language explanations** — what the metric is, how to read it, and whether the value is favorable or not — so beginners can learn while they look.
-- The **Community** side — explanations, “how to read this metric,” ideas, and guides — could be **contributed by GitHub users**: open, reviewable, and versioned like code.
-- **Initial format for contributions: Markdown.** Markdown is familiar to GitHub users, trivial to edit and review in PRs, renders nicely in the app and in repos, and keeps the barrier to contribution low. We can add richer formats later if needed; starting with Markdown keeps the door open for maximum participation.
+- **TradingView** — [TradingView](https://www.tradingview.com) is the benchmark for **beautiful charts** and a strong **News** section. We aim for similar clarity and polish for long-term investors (without the trading focus).
+
+- **Seeking Alpha — comparison & screeners**
+  - [Comparison](https://seekingalpha.com/comparison) — compare multiple symbols side by side (favorite tool).
+  - [Sectors hub](https://seekingalpha.com/sectors) — sector comparison: how sectors perform relative to each other.
+  - Sectors: [Technology](https://seekingalpha.com/sectors/technology), [Financial](https://seekingalpha.com/sectors/financial), [Consumer Discretionary](https://seekingalpha.com/sectors/consumer-discretionary), [Communication](https://seekingalpha.com/sectors/communication-services), [Healthcare](https://seekingalpha.com/sectors/healthcare), [Industrials](https://seekingalpha.com/sectors/industrials), [Consumer Staples](https://seekingalpha.com/sectors/consumer-staples), [Energy](https://seekingalpha.com/sectors/energy), [Materials](https://seekingalpha.com/sectors/materials), [Real Estate](https://seekingalpha.com/sectors/real-estate), [Utilities](https://seekingalpha.com/sectors/utilities).
+  - [Dividend screeners](https://seekingalpha.com/screeners/9679329c-Top-Dividend-Stocks) (e.g. Top Dividend Stocks) — how dividends performed; useful for income-focused views.
+
+- **Seeking Alpha — per-symbol pages**
+  - [Profitability](https://seekingalpha.com/symbol/TSLA/profitability), [Growth](https://seekingalpha.com/symbol/TSLA/growth), [Valuation](https://seekingalpha.com/symbol/TSLA/valuation/metrics), [Earnings](https://seekingalpha.com/symbol/TSLA/earnings) — with color coding when a metric is good or bad.
+  - **Comparison vs the market** — stock vs the market it’s listed on: [Seeking Alpha charting](https://seekingalpha.com/symbol/TSLA/charting); [Morningstar Trailing Returns](https://www.morningstar.com/stocks/xnas/avgo/trailing-returns) (e.g. [AVGO](https://www.morningstar.com/stocks/xnas/avgo/trailing-returns)) offers similar comparison-to-market views.
+  - **Peer comparison** — how a stock stacks up vs peers: [TSLA vs peers](https://seekingalpha.com/symbol/TSLA/peers/comparison); strong reference for context and relative valuation.
+
+- **What we add** — Plain-language explanations: what each metric is, how to read it, and whether the value is favorable or not. Many tools show numbers and colors but don’t explain *why* it’s good or bad; we want beginners to learn while they look. [WallStreetZen industry screeners](https://www.wallstreetzen.com/industries/best-semiconductor-stocks?t=10&p=1&f%5Biid%5D=111&s=mc&sd=desc) (e.g. Best Semiconductor Stocks) use **tooltip explanations** for technical terms (RSI, MACD, SMA, etc.) — we want the same, plus **colors** (e.g. red / green / gray) to suggest overpriced vs underpriced vs fair value, so both “what it means” and “where it stands” are clear at a glance.
+
+- **Community** — Explanations, “how to read this metric,” ideas, and guides could be **contributed by GitHub users**: open, reviewable, and versioned like code.
+
+- **Contribution format** — **Markdown** first: familiar to GitHub users, trivial to edit and review in PRs, renders in the app and in repos. We can add richer formats later; Markdown keeps the barrier low.
 
 **App structure (MVP tabs).** For stocks we plan:
 
@@ -45,42 +57,96 @@ That’s it — we keep the depth right for beginner investors and skip the rest
 
 **Planned features (nice to have & future):**
 
-- [TradingView’s Economic Calendar](https://www.tradingview.com/economic-calendar/) — economic events, filters by country/importance (we have CNN’s economic-events endpoint for data).
-- [TradingView’s Earnings Calendar](https://www.tradingview.com/earnings-calendar/) — upcoming earnings, EPS estimate vs actual, surprise.
-- [TradingView’s Dividend Calendar](https://www.tradingview.com/dividend-calendar/) — dividend amount, ex-dividend date, payment date, yield; sortable by period/country/timezone.
-- [TradingView’s IPO Calendar](https://www.tradingview.com/ipo-calendar/?countries=us) — e.g. US.
-- [TradingView’s Macro Maps](https://www.tradingview.com/macro-maps/) — global macroeconomic trends.
-- [TradingView’s Yield Curves](https://www.tradingview.com/yield-curves/) — explore and compare yields by country and tenor.
+- **Calendars**
+  - [TradingView Economic Calendar](https://www.tradingview.com/economic-calendar/) — economic events, filters by country/importance (we have CNN’s economic-events endpoint for data).
+  - [TradingView Earnings Calendar](https://www.tradingview.com/earnings-calendar/) — upcoming earnings, EPS estimate vs actual, surprise.
+  - [TradingView Dividend Calendar](https://www.tradingview.com/dividend-calendar/) — dividend amount, ex-dividend date, payment date, yield; sortable by period/country/timezone.
+  - [TradingView IPO Calendar](https://www.tradingview.com/ipo-calendar/?countries=us) — e.g. US.
+- **Macro & yields**
+  - [TradingView Macro Maps](https://www.tradingview.com/macro-maps/) — global macroeconomic trends.
+  - [TradingView Yield Curves](https://www.tradingview.com/yield-curves/) — explore and compare yields by country and tenor.
 - **Heatmaps** — ETF, Crypto, and Stock heatmaps (TradingView-style) for at-a-glance market views.
-- **Sector comparison** — [Seeking Alpha–style sector pages](https://seekingalpha.com/sectors): Technology, Financial, Consumer Discretionary, Communication, Healthcare, Industrials, Consumer Staples, Energy, Materials, Real Estate, Utilities — comparing how sectors performed; at-a-glance relative performance.
-- **Dividend screeners** — [Seeking Alpha–style dividend presentation](https://seekingalpha.com/screeners/9679329c-Top-Dividend-Stocks) (e.g. Top Dividend Stocks): how dividends performed; useful for income-focused, at-a-glance views.
-- **Symbol comparison tool** — [Seeking Alpha–style Comparison](https://seekingalpha.com/comparison): compare multiple symbols side by side; a strong reference for head-to-head analysis.
-- **Per-symbol fundamentals & peer comparison** — [Seeking Alpha–style](https://seekingalpha.com/symbol/TSLA/profitability) profitability, growth, valuation, and earnings with good/bad color coding; comparison vs the [market the stock is listed on](https://seekingalpha.com/symbol/TSLA/charting); plus [peer comparison](https://seekingalpha.com/symbol/TSLA/peers/comparison) (stock vs peers) for context and relative valuation.
+- **Sector comparison** — [Seeking Alpha–style sector pages](https://seekingalpha.com/sectors): Technology, Financial, Consumer Discretionary, Communication, Healthcare, Industrials, Consumer Staples, Energy, Materials, Real Estate, Utilities; at-a-glance relative performance.
+- **Dividend screeners** — [Seeking Alpha–style dividend presentation](https://seekingalpha.com/screeners/9679329c-Top-Dividend-Stocks) (e.g. Top Dividend Stocks); income-focused, at-a-glance views.
+- **Symbol comparison** — [Seeking Alpha Comparison](https://seekingalpha.com/comparison): multiple symbols side by side; head-to-head analysis.
+- **Per-symbol fundamentals & peer comparison** — [Seeking Alpha–style](https://seekingalpha.com/symbol/TSLA/profitability) profitability, growth, valuation, earnings with good/bad color coding; comparison vs [market](https://seekingalpha.com/symbol/TSLA/charting); [peer comparison](https://seekingalpha.com/symbol/TSLA/peers/comparison) for context and relative valuation.
+- **Ownership structure** — [Morningstar Ownership](https://www.morningstar.com/stocks/xnas/avgo/ownership) (e.g. [AVGO](https://www.morningstar.com/stocks/xnas/avgo/ownership)): who holds the stock (institutions, insiders, etc.); nice to have for context on who’s invested.
+- **Fair value / price vs fair value** — Show whether a stock is over- or undervalued vs an estimated fair value (e.g. DCF-based). References: [Morningstar Price/Fair Value](https://www.morningstar.com/stocks/xnas/avgo/price-fair-value) (e.g. [AVGO](https://www.morningstar.com/stocks/xnas/avgo/price-fair-value)); [WallStreetZen](https://www.wallstreetzen.com/stocks/us/nasdaq/nvda) (e.g. [NVDA](https://www.wallstreetzen.com/stocks/us/nasdaq/nvda)) — current price vs fair value, overvalued/undervalued %, and due-diligence-style valuation checks. Fits our “context on valuation” goal.
 
 ### Beautiful charts by feature
 
 Suggested chart types for each area — clear, scannable, and aligned with long-term investing (not noisy trading UIs).
 
-| Feature | Chart types | Notes |
-|--------|-------------|--------|
-| **Overview** | **Area or line chart** (price over time), **sparklines** for key metrics (volume, range). Optional: **candlestick** for users who want OHLC. | One main chart; keep time ranges (1Y, 5Y, Max) and clean axes. |
-| **Financials** | **Bar chart** (revenue/income by year or quarter). **Treemap** or **stacked bar** (revenue by segment). **Progress bars / gauges** (e.g. valuation vs sector). **Line chart** (revenue, EPS, margins over time). | Emphasize trends and composition; tooltips for definitions. |
-| **Technicals** | **Gauges** or **half-donuts** (RSI, MACD, etc.) with red/green/gray for overpriced / underpriced / fair. **Summary cards** with a small **sparkline** per indicator. | Focus on “what it means” tooltips; avoid clutter. |
-| **Forecasts** | **Range bar** or **bullet** (price target: low / consensus / high). **Horizontal bar** (analyst ratings: Strong Buy → Sell). **Grouped bar** or **line** (EPS/revenue: actual vs estimate by quarter). **Surprise indicator** (e.g. up/down arrow or small bar for beat/miss). | Make “what analysts expect” obvious at a glance. |
-| **Seasonals** | **Heatmap** (month × year, color = cumulative % return) or **bar chart** (avg return by month). Optional: **line** (cumulative % by month across years). | One clear “historical pattern by month”; always pair with disclaimer. |
-| **World markets** | **Choropleth map** (countries/regions colored by performance). **Bar chart** (indices by region). **Small multiples** (mini line charts per region). | You already have a map reference; bar or small multiples add quick comparison. |
-| **Fear & Greed** | **Gauge** or **meter** (0–100 scale), **timeline** (historical Fear & Greed over time). | Single number + short history; minimal, iconic. |
-| **Economic calendar** | **Timeline** or **list** (events by date, with importance/impact styling). **Filter chips** (country, importance). | Scannable list; optional mini **bar** for “events per day”. |
-| **Earnings / Dividend / IPO calendars** | **Calendar grid** (month view with dots or badges). **Timeline** (upcoming by date). **Table + sparkline** (estimate vs actual for earnings). | Calendar for “when”; table for “what happened”. |
-| **Macro maps** | **Choropleth** (country/region by macro metric). **Bubble map** (size = magnitude, color = direction). | Global at-a-glance; link to detail. |
-| **Yield curves** | **Line chart** (yield % vs tenor: 1M, 3M, 6M, 1Y, …). **Multi-line** (compare countries or dates). Optional **area** for spread. | Classic yield-curve view; clear legend. |
-| **Heatmaps (stocks/sectors/ETF)** | **Matrix heatmap** (rows = symbols/sectors, columns = time or metrics; color = return or value). **Grid of tiles** (each cell = one symbol, color = performance). | At-a-glance “what’s up, what’s down”; click for detail. |
-| **Sector comparison** | **Horizontal bar** (sectors by return or weight). **Radar** (sectors on axes). **Grouped bar** (sectors vs benchmark over periods). | “How did sectors perform relative to each other”. |
-| **Dividend screeners** | **Table** with **sparklines** (yield, growth over time). **Bar chart** (top dividends by yield or amount). **Ranked list** with small **trend line**. | Income-focused; sortable, scannable. |
-| **Symbol comparison** | **Small multiples** (one **line chart** per symbol, same scale). **Grouped bar** (metric A vs B vs C for each symbol). **Table** with **inline sparklines**. | Same scale so comparison is fair. |
-| **Peer comparison** | **Radar chart** (one axis per metric, one series per symbol). **Horizontal bar** (symbols × metric). **Bullet chart** (symbol vs peer avg or benchmark). | “This stock vs peers” on valuation, growth, profitability. |
+- **Overview**
+  - Area or line chart (price over time), sparklines for key metrics (volume, range). Optional: candlestick for OHLC.
+  - One main chart; time ranges (1Y, 5Y, Max) and clean axes.
 
-**Chart library ideas:** [TradingView Charting Library](https://www.tradingview.com/charting-library-docs/) (price/charts), [Lightweight Charts](https://tradingview.github.io/lightweight-charts/) (open-source), [Highcharts](https://www.highcharts.com/) (polished stock charts, gauges, maps), [Recharts](https://recharts.org/) or [Victory](https://formidable.com/open-source/victory/) (React), [Chart.js](https://www.chartjs.org/) or [Apache ECharts](https://echarts.apache.org/) (flexible). **Data visualization / custom:** [D3.js](https://d3js.org/) (low-level, full control; use with [d3-shape](https://github.com/d3/d3-shape), [d3-scale](https://github.com/d3/d3-scale), etc.), [Observable Plot](https://observableh.com/plot/) (declarative, built on D3), [Vega](https://vega.github.io/vega/) / [Vega-Lite](https://vega.github.io/vega-lite/) (grammar of graphics, JSON specs), [ApexCharts](https://apexcharts.com/) (modern SVG charts). For maps: [Mapbox](https://www.mapbox.com/), [Leaflet](https://leafletjs.com/), [Deck.gl](https://deck.gl/), or Highcharts Maps. Pick one or two for consistency and bundle size.
+- **Financials**
+  - Bar chart (revenue/income by year or quarter). Treemap or stacked bar (revenue by segment). Progress bars / gauges (e.g. valuation vs sector). Line chart (revenue, EPS, margins over time).
+  - Emphasize trends and composition; tooltips for definitions.
+- **Technicals**
+  - Gauges or half-donuts (RSI, MACD, etc.) with red/green/gray for overpriced / underpriced / fair. **Summary cards** with a small **sparkline** per indicator.
+  - Focus on “what it means” tooltips; avoid clutter.
+
+- **Forecasts**
+  - Range bar or **bullet** (price target: low / consensus / high). **Horizontal bar** (analyst ratings: Strong Buy → Sell). **Grouped bar** or **line** (EPS/revenue: actual vs estimate by quarter). **Surprise indicator** (e.g. up/down arrow or small bar for beat/miss).
+  - Make “what analysts expect” obvious at a glance.
+
+- **Seasonals**
+  - Heatmap (month × year, color = cumulative % return) or **bar chart** (avg return by month). Optional: **line** (cumulative % by month across years).
+  - One clear “historical pattern by month”; always pair with disclaimer.
+
+- **World markets**
+  - Choropleth map (countries/regions colored by performance). Bar chart (indices by region). Small multiples (mini line charts per region).
+  - Map + bar or small multiples for quick comparison.
+
+- **Fear & Greed**
+  - Gauge or meter (0–100 scale), timeline (historical Fear & Greed over time).
+  - Single number + short history; minimal, iconic.
+
+- **Economic calendar**
+  - Timeline or **list** (events by date, with importance/impact styling). **Filter chips** (country, importance).
+  - Scannable list; optional mini **bar** for “events per day”.
+
+- **Earnings / Dividend / IPO calendars**
+  - Calendar grid (month view with dots or badges). **Timeline** (upcoming by date). **Table + sparkline** (estimate vs actual for earnings).
+  - Calendar for “when”; table for “what happened”.
+
+- **Macro maps**
+  - Choropleth (country/region by macro metric). Bubble map (size = magnitude, color = direction).
+  - Global at-a-glance; link to detail.
+
+- **Yield curves**
+  - Line chart (yield % vs tenor: 1M, 3M, 6M, 1Y, …). Multi-line (compare countries or dates). Optional area for spread.
+  - Classic yield-curve view; clear legend.
+
+- **Heatmaps (stocks / sectors / ETF)**
+  - Matrix heatmap (rows = symbols/sectors, columns = time or metrics; color = return or value). **Grid of tiles** (each cell = one symbol, color = performance).
+  - At-a-glance “what’s up, what’s down”; click for detail.
+
+- **Sector comparison**
+  - Horizontal bar (sectors by return or weight). **Radar** (sectors on axes). **Grouped bar** (sectors vs benchmark over periods).
+  - “How did sectors perform relative to each other”.
+
+- **Dividend screeners**
+  - Table with sparklines (yield, growth over time). Bar chart (top dividends by yield or amount). Ranked list with small trend line.
+  - Income-focused; sortable, scannable.
+
+- **Symbol comparison**
+  - Small multiples (one line chart per symbol, same scale). Grouped bar (metric A vs B vs C per symbol). Table with inline sparklines.
+  - Same scale so comparison is fair.
+
+- **Peer comparison**
+  - Radar chart (one axis per metric, one series per symbol). **Horizontal bar** (symbols × metric). **Bullet chart** (symbol vs peer avg or benchmark).
+  - “This stock vs peers” on valuation, growth, profitability.
+
+**Chart library ideas**
+
+- Price/charts: [TradingView Charting Library](https://www.tradingview.com/charting-library-docs/), [Lightweight Charts](https://tradingview.github.io/lightweight-charts/) (open-source), [Highcharts](https://www.highcharts.com/) (stock charts, gauges, maps).
+- General: [Recharts](https://recharts.org/), [Victory](https://formidable.com/open-source/victory/) (React), [Chart.js](https://www.chartjs.org/), [Apache ECharts](https://echarts.apache.org/).
+- Data viz / custom: [D3.js](https://d3js.org/) (low-level; [d3-shape](https://github.com/d3/d3-shape), [d3-scale](https://github.com/d3/d3-scale)), [Observable Plot](https://observableh.com/plot/) (declarative), [Vega](https://vega.github.io/vega/) / [Vega-Lite](https://vega.github.io/vega-lite/) (grammar of graphics), [ApexCharts](https://apexcharts.com/) (modern SVG).
+- Maps: [Mapbox](https://www.mapbox.com/), [Leaflet](https://leafletjs.com/), [Deck.gl](https://deck.gl/), Highcharts Maps.
+- Pick one or two for consistency and bundle size.
 
 ### Technicals (indicators summary)
 
@@ -90,12 +156,12 @@ Suggested chart types for each area — clear, scannable, and aligned with long-
 
 *Example: TradingView-style indicators’ summary (screenshot).*
 
-- **Tooltips.** The current Technicals UI doesn’t explain what each indicator is or how to read it. We want **tooltips** (or inline help) on every indicator name and value so users can learn what “Relative Strength Index (14)”, “Ichimoku Base Line”, “Pivots (Classic/Fibonacci)”, etc. mean without leaving the page.
-- **Red / green / gray = valuation context, not buy/sell.** We use **red** for **overpriced**, **green** for **underpriced**, and **gray** for **fairly priced**. We do **not** frame signals as “Buy” or “Sell” — we aim to inform long-term investors about relative value and context, not to suggest trading actions.
+- **Tooltips.** The current Technicals UI doesn’t explain what each indicator is or how to read it. We want **tooltips** (or inline help) on every indicator name and value so users can learn what “Relative Strength Index (14)”, “Ichimoku Base Line”, “Pivots (Classic/Fibonacci)”, etc. mean without leaving the page. [WallStreetZen industry screeners](https://www.wallstreetzen.com/industries/best-semiconductor-stocks?t=10&p=1&f%5Biid%5D=111&s=mc&sd=desc) are a good reference for tooltip-style explanations of technical terms; we combine that with color coding for valuation.
+- **Red / green / gray = valuation context, not buy/sell.** We use **red** for **overpriced**, **green** for **underpriced**, and **gray** for **fairly priced**. We do **not** frame signals as “Buy” or “Sell” — we aim to inform long-term investors about relative value and context, not to suggest trading actions. So: **tooltips for “what it means” + colors for “over/under/fair”** in one place.
 
 ### Forecasts
 
-[TradingView’s Forecast view](https://www.tradingview.com/symbols/NASDAQ-AMD/forecast/) (price target, analyst rating, EPS and revenue with reported vs estimate) is a strong reference. It clearly presents **what analysts are expecting** — price target range, ratings breakdown, and quarterly EPS/revenue with surprises — so we’re happy to keep this kind of layout as-is.
+[TradingView’s Forecast view](https://www.tradingview.com/symbols/NASDAQ-AMD/forecast/) (price target, analyst rating, EPS and revenue with reported vs estimate) is a strong reference. It clearly presents **what analysts are expecting** — price target range, ratings breakdown, and quarterly EPS/revenue with surprises — so we’re happy to keep this kind of layout as-is. [WallStreetZen Stock Forecast](https://www.wallstreetzen.com/stocks/us/nasdaq/nvda/stock-forecast) (e.g. [NVDA](https://www.wallstreetzen.com/stocks/us/nasdaq/nvda/stock-forecast)) also has this: analyst price targets (min / avg / max), Strong Buy → Strong Sell breakdown, analyst-by-analyst table with price target and upside, plus EPS and revenue forecasts (1Y–3Y) and forecast ROE/ROA vs industry — a good reference for the Forecasts tab.
 
 ![Forecast: price target, analyst rating, EPS and revenue](forecast.png)
 
