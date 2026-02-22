@@ -22,6 +22,8 @@ We want to offer the app in the same spirit as [Ditectrev’s Practice Tests Exa
 
 A dedicated **pricing** page (e.g. `/pricing`) will list these options clearly, like [education.ditectrev.com/pricing](https://education.ditectrev.com/pricing).
 
+**AI beyond chat.** Apps like [Trade Ideas](https://www.trade-ideas.com) and [RockFlow Bobby](https://bobby.rockflow.ai) offer embedded AI chat — a useful but trivial feature. We want to go further: AI that delivers **proper visual representation** of our graphs, data, and explanations — e.g. surfacing or highlighting the right chart, annotating a metric on a timeline, or tying an explanation to the specific visual it describes — not just text in a chat bubble. The goal is “show, don’t just tell.”
+
 ### Charts, news & community (TradingView-inspired)
 
 - **TradingView** — [TradingView](https://www.tradingview.com) is the benchmark for **beautiful charts** and a strong **News** section. We aim for similar clarity and polish for long-term investors (without the trading focus).
