@@ -69,6 +69,7 @@ That’s it — we keep the depth right for beginner investors and skip the rest
   - [TradingView Yield Curves](https://www.tradingview.com/yield-curves/) — explore and compare yields by country and tenor.
 - **Heatmaps** — ETF, Crypto, and Stock heatmaps (TradingView-style) for at-a-glance market views.
 - **Assets screener** — Search and filter stocks (or other assets) by criteria (e.g. valuation, growth, dividends, sector). References: [TradingView Stock Screener](https://www.tradingview.com/screener/), [Seeking Alpha Screeners](https://seekingalpha.com/screeners); good possible feature for discovering ideas that match our metrics and valuation context.
+- **Signals** — Alerts or signals based on metrics, valuation, or technicals (aligned with our “context, not buy/sell” approach). Many apps offer this; references: [Tickeron](https://tickeron.com), [Wundertrading](https://wundertrading.com/en).
 - **Sector comparison** — [Seeking Alpha–style sector pages](https://seekingalpha.com/sectors): Technology, Financial, Consumer Discretionary, Communication, Healthcare, Industrials, Consumer Staples, Energy, Materials, Real Estate, Utilities; at-a-glance relative performance.
 - **Dividend screeners** — [Seeking Alpha–style dividend presentation](https://seekingalpha.com/screeners/9679329c-Top-Dividend-Stocks) (e.g. Top Dividend Stocks); income-focused, at-a-glance views.
 - **Symbol comparison** — [Seeking Alpha Comparison](https://seekingalpha.com/comparison): multiple symbols side by side; head-to-head analysis.
