@@ -239,6 +239,21 @@ So globally: stock apps get their API data from **market-data API providers and 
 
 ---
 
+## Yahoo Finance API (unofficial)
+
+Yahoo Finance quote and related endpoints can be fetched **without an API key** (like CNN Business dataviz); others (e.g. **MSN**) require a key. The endpoints are **unofficial/undocumented** and may change or be restricted; use at your own risk and check Yahoo’s terms.
+
+**Example — quote (v7):**  
+`https://query1.finance.yahoo.com/v7/finance/quote?&symbols=TSLA&fields=currency,fromCurrency,toCurrency,exchangeTimezoneName,exchangeTimezoneShortName,gmtOffSetMilliseconds,regularMarketChange,regularMarketChangePercent,regularMarketPrice,regularMarketTime,preMarketChange,preMarketChangePercent,preMarketPrice,preMarketTime,priceHint,postMarketChange,postMarketChangePercent,postMarketPrice,postMarketTime,extendedMarketChange,extendedMarketChangePercent,extendedMarketPrice,extendedMarketTime,overnightMarketChange,overnightMarketChangePercent,overnightMarketPrice,overnightMarketTime&crumb=hxfxfaecnO8&formatted=false&region=US&lang=en-US`
+
+- **symbols** — Comma-separated tickers (e.g. `TSLA`, `AAPL,MSFT`).
+- **fields** — Requested fields (currency, regularMarketPrice, preMarketPrice, postMarketPrice, etc.).
+- **crumb** — Sometimes required by Yahoo for CSRF; may be session-dependent when called from a browser context; some server-side or direct HTTP usage may work without it or with a fixed value depending on endpoint. For production, consider official data providers or documented Yahoo alternatives.
+
+**Summary:** Like CNN dataviz, Yahoo quote APIs are a no-key option for prototyping or light use; MSN and many other providers require an API key.
+
+---
+
 ## CNN Business API endpoints
 
 **What kind of API does CNN Business offer?** CNN does **not** publish an official developer API or documentation for Markets or Business data. References:
