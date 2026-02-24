@@ -40,6 +40,7 @@ A dedicated **pricing** page (e.g. `/pricing`) will list these options clearly, 
   - **Peer comparison** — how a stock stacks up vs peers: [TSLA vs peers](https://seekingalpha.com/symbol/TSLA/peers/comparison); strong reference for context and relative valuation.
 
 - **What we add** — Plain-language explanations: what each metric is, how to read it, and whether the value is favorable or not. Many tools show numbers and colors but don’t explain *why* it’s good or bad; we want beginners to learn while they look. [WallStreetZen industry screeners](https://www.wallstreetzen.com/industries/best-semiconductor-stocks?t=10&p=1&f%5Biid%5D=111&s=mc&sd=desc) (e.g. Best Semiconductor Stocks) use **tooltip explanations** for technical terms (RSI, MACD, SMA, etc.) — we want the same, plus **colors** (e.g. red / green / gray) to suggest overpriced vs underpriced vs fair value, so both “what it means” and “where it stands” are clear at a glance.
+- **Tip + color for every indicator (comparison & single).** Comparison views (e.g. Yahoo, Seeking Alpha) often show raw numbers but not *whether* a value is good or bad. We want **every** technical indicator and metric to have: (1) a **tip or short explanation** (what it is, how to read it), and (2) a **visual cue (e.g. color)** indicating good vs not: **relative** in comparison (e.g. which symbol is better on this metric among the compared set), and **absolute** for a single instrument (e.g. is this P/E or RSI favorable vs benchmark or typical range). So users always see “what it is” and “is this good or not” — in both compare and single-stock views.
 
 - **Community** — Explanations, “how to read this metric,” ideas, and guides could be **contributed by GitHub users**: open, reviewable, and versioned like code.
 
@@ -72,7 +73,7 @@ That’s it — we keep the depth right for beginner investors and skip the rest
 - **Signals** — Alerts or signals based on metrics, valuation, or technicals (aligned with our “context, not buy/sell” approach). Many apps offer this; references: [Tickeron](https://tickeron.com), [Wundertrading](https://wundertrading.com/en).
 - **Sector comparison** — [Seeking Alpha–style sector pages](https://seekingalpha.com/sectors): Technology, Financial, Consumer Discretionary, Communication, Healthcare, Industrials, Consumer Staples, Energy, Materials, Real Estate, Utilities; at-a-glance relative performance.
 - **Dividend screeners** — [Seeking Alpha–style dividend presentation](https://seekingalpha.com/screeners/9679329c-Top-Dividend-Stocks) (e.g. Top Dividend Stocks); income-focused, at-a-glance views.
-- **Symbol comparison** — Multiple symbols side by side; head-to-head analysis. References: [Seeking Alpha Comparison](https://seekingalpha.com/comparison), [AInvest Compare](https://www.ainvest.com/compare/) (stocks & ETFs, data & AI recommendations).
+- **Symbol comparison** — Multiple symbols side by side; head-to-head analysis. References: [Seeking Alpha Comparison](https://seekingalpha.com/comparison), [AInvest Compare](https://www.ainvest.com/compare/) (stocks & ETFs, data & AI recommendations), [Yahoo Finance Compare](https://ca.finance.yahoo.com/compare?comps=TSLA,RIVN) (e.g. [TSLA vs RIVN](https://ca.finance.yahoo.com/compare?comps=TSLA,RIVN) — market value, P/E, performance, income statement, balance sheet, cash flow, margins, earnings, ownership; up to four stocks). Unlike plain comparison tables, we add **tips** for each metric and **relative** color (which symbol is better/worse on that metric) so users see not just the number but whether it’s good or not in context.
 - **Per-symbol fundamentals & peer comparison** — [Seeking Alpha–style](https://seekingalpha.com/symbol/TSLA/profitability) profitability, growth, valuation, earnings with good/bad color coding; comparison vs [market](https://seekingalpha.com/symbol/TSLA/charting); [peer comparison](https://seekingalpha.com/symbol/TSLA/peers/comparison) for context and relative valuation.
 - **Ownership structure** — [Morningstar Ownership](https://www.morningstar.com/stocks/xnas/avgo/ownership) (e.g. [AVGO](https://www.morningstar.com/stocks/xnas/avgo/ownership)): who holds the stock (institutions, insiders, etc.); nice to have for context on who’s invested.
 - **Fair value / price vs fair value** — Show whether a stock is over- or undervalued vs an estimated fair value (e.g. DCF-based). References: [Morningstar Price/Fair Value](https://www.morningstar.com/stocks/xnas/avgo/price-fair-value) (e.g. [AVGO](https://www.morningstar.com/stocks/xnas/avgo/price-fair-value)); [WallStreetZen](https://www.wallstreetzen.com/stocks/us/nasdaq/nvda) (e.g. [NVDA](https://www.wallstreetzen.com/stocks/us/nasdaq/nvda)) — current price vs fair value, overvalued/undervalued %, and due-diligence-style valuation checks. Fits our “context on valuation” goal.
@@ -92,7 +93,7 @@ Suggested chart types for each area — clear, scannable, and aligned with long-
   - Emphasize trends and composition; tooltips for definitions.
 - **Technicals**
   - Gauges or half-donuts (RSI, MACD, etc.) with red/green/gray for overpriced / underpriced / fair. **Summary cards** with a small **sparkline** per indicator.
-  - Focus on “what it means” tooltips; avoid clutter.
+  - **Tip + absolute color** on every indicator: tooltip for “what it means,” color for whether the level is good or not (absolute vs benchmark or typical range). Same idea in comparison: relative color for “which is better.”
 
 - **Forecasts**
   - Range bar or **bullet** (price target: low / consensus / high). **Horizontal bar** (analyst ratings: Strong Buy → Sell). **Grouped bar** or **line** (EPS/revenue: actual vs estimate by quarter). **Surprise indicator** (e.g. up/down arrow or small bar for beat/miss).
@@ -140,11 +141,11 @@ Suggested chart types for each area — clear, scannable, and aligned with long-
 
 - **Symbol comparison**
   - Small multiples (one line chart per symbol, same scale). Grouped bar (metric A vs B vs C per symbol). Table with inline sparklines.
-  - Same scale so comparison is fair.
+  - Same scale so comparison is fair. **Tip + relative color** on every metric: tooltip for “what it is,” color for “which is better/worse” in the comparison.
 
 - **Peer comparison**
   - Radar chart (one axis per metric, one series per symbol). **Horizontal bar** (symbols × metric). **Bullet chart** (symbol vs peer avg or benchmark).
-  - “This stock vs peers” on valuation, growth, profitability.
+  - “This stock vs peers” on valuation, growth, profitability. **Tip + relative color** (vs peers) so each metric shows not just the value but whether it’s good or not in context.
 
 **Chart library ideas**
 
